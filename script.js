@@ -1,3 +1,4 @@
+emailjs.init("hwQoNzqQHI40rLmZj");
 // FAQ Accordion
 
 const faqQuestions = document.querySelectorAll(".faq-question");
@@ -174,3 +175,45 @@ if (backToTop) {
     });
 
 }
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const button = form.querySelector("button");
+
+    button.innerHTML = "Sending...";
+    button.disabled = true;
+
+    emailjs.sendForm(
+        "service_0e0szfu",
+        "template_7xw62e5",
+        this
+    )
+
+    .then(() => {
+
+        button.innerHTML = "✅ Sent";
+
+        alert("Thank you! We'll contact you soon.");
+
+        form.reset();
+
+        button.innerHTML = "Get Free Quote";
+
+        button.disabled = false;
+
+    })
+
+    .catch(() => {
+
+        alert("Something went wrong.");
+
+        button.innerHTML = "Get Free Quote";
+
+        button.disabled = false;
+
+    });
+
+});
