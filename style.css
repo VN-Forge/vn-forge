@@ -187,6 +187,8 @@ translateX(0px);
     position:relative;
     z-index:2;
     max-width:900px;
+    text-align:center;
+    margin:0 auto;
 }
 
 .hero h1{
@@ -194,6 +196,8 @@ translateX(0px);
     line-height:1.2;
     font-family:'Cinzel',serif;
     color:#fff;
+    margin:0 auto;
+    text-align:center;
 }
 
 .hero p{
@@ -248,12 +252,21 @@ translateX(0px);
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:42px;
+    
+.hero-content{
+        width:90%;
+        margin:0 auto;
+        text-align:center;
+    }
+
+    .hero h1{
+     font-size:38px;
+        text-align:center;
 }
 
 .hero p{
     font-size:18px;
+    text-align:center;
 }
 
 .nav-links{
@@ -2403,7 +2416,6 @@ html{
     min-width:220px;
 
 }
-
 
 
 
