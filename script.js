@@ -1,4 +1,6 @@
-emailjs.init("hwQoNzqQHI40rLmZj");
+emailjs.init({
+    publicKey: "hwQoNzqQHI40rLmZj",
+});
 // FAQ Accordion
 
 const faqQuestions = document.querySelectorAll(".faq-question");
